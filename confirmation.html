@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Confirmed | FoodieHub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                Foodie<span>Hub.</span>
+            </a>
+
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+                <li>
+                    <a href="cart.html" class="cart-link">
+                        Cart
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Confirmation Section -->
+    <section class="confirmation-section">
+
+        <div class="confirmation-card">
+
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+
+            <span class="section-tag">ORDER SUCCESSFUL</span>
+
+            <h1>Thank You for <span>Your Order!</span></h1>
+
+            <p class="confirmation-text">
+                Your delicious food is being prepared.
+                Thank you for choosing FoodieHub!
+            </p>
+
+
+            <!-- Order Information -->
+            <div class="order-details">
+
+                <h3>Order Information</h3>
+
+                <div class="order-detail-row">
+                    <span>Order ID</span>
+                    <strong id="confirmationOrderId">Loading...</strong>
+                </div>
+
+                <div class="order-detail-row">
+                    <span>Customer Name</span>
+                    <strong id="confirmationCustomer">Loading...</strong>
+                </div>
+
+                <div class="order-detail-row">
+                    <span>Phone Number</span>
+                    <strong id="confirmationPhone">Loading...</strong>
+                </div>
+
+                <div class="order-detail-row">
+                    <span>Payment Method</span>
+                    <strong id="confirmationPayment">Loading...</strong>
+                </div>
+
+                <div class="order-detail-row">
+                    <span>Order Date</span>
+                    <strong id="confirmationDate">Loading...</strong>
+                </div>
+
+              <div class="order-detail-row">
+                <span>Order Time</span>
+                <strong id="confirmationTime">Loading...</strong>
+               </div>
+
+             </div>
+
+
+            <!-- Ordered Food Items -->
+            <div class="ordered-food-section">
+
+                <h3>🍽️ Your Ordered Food Items</h3>
+
+                <div id="confirmationItems">
+                    Loading your food items...
+                </div>
+
+            </div>
+
+
+            <!-- Delivery Address -->
+            <div class="order-details">
+
+                <h3>Delivery Address</h3>
+
+                <p id="confirmationAddress">
+                    Loading address...
+                </p>
+
+            </div>
+
+
+            <!-- Final Bill -->
+            <div class="order-details">
+
+                <h3>Payment Summary</h3>
+
+                <div class="order-detail-row">
+                    <span>Subtotal</span>
+                    <strong id="confirmationSubtotal">₹0</strong>
+                </div>
+
+                <div class="order-detail-row">
+                    <span>GST (5%)</span>
+                    <strong id="confirmationTax">₹0</strong>
+                </div>
+
+                <div class="order-detail-row">
+                    <span>Delivery Charge</span>
+                    <strong id="confirmationDelivery">₹0</strong>
+                </div>
+
+                <div class="order-detail-row">
+                    <span>Discount</span>
+                    <strong id="confirmationDiscount">₹0</strong>
+                </div>
+
+
+                <div class="order-detail-row">
+                    <span><strong>Grand Total</strong></span>
+                    <strong id="confirmationTotal">₹0</strong>
+                </div>
+
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="confirmation-buttons">
+
+                <a href="menu.html" class="btn">
+                    Order More Food
+                </a>
+
+                <a href="index.html" class="btn btn-outline">
+                    Back to Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-bottom">
+            <p>© 2026 FoodieHub. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"
+        crossorigin="anonymous">
+    </script>
+
+</body>
+</html>

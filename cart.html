@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Cart | FoodieHub</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="header">
+
+        <nav class="navbar container">
+
+            <a href="index.html" class="logo">
+
+                <i class="fas fa-utensils"></i>
+
+                Foodie<span>Hub</span>
+
+            </a>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="menu.html">Menu</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+
+            <div class="nav-icons">
+
+                <a href="cart.html" class="cart-icon active">
+
+                    <i class="fas fa-shopping-cart"></i>
+
+                    <span id="cart-count">0</span>
+
+                </a>
+
+                <a href="menu.html" class="btn nav-btn">
+                    Order Now
+                </a>
+
+                <i class="fas fa-bars menu-toggle" id="menuToggle"></i>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= CART HERO ================= -->
+
+    <section class="menu-hero">
+
+        <div class="container">
+
+            <span class="hero-tag">
+
+                <i class="fas fa-shopping-bag"></i>
+
+                Your Shopping Cart
+
+            </span>
+
+
+            <h1>
+
+                My <span>Food Cart</span>
+
+            </h1>
+
+
+            <p>
+
+                Review your favourite food items
+                before placing your order.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CART SECTION ================= -->
+
+    <section class="cart-section section-padding">
+
+        <div class="container">
+
+
+            <div class="cart-container">
+
+
+                <!-- CART ITEMS -->
+
+                <div class="cart-items-section">
+
+
+                    <div class="cart-heading">
+
+                        <h2>
+
+                            <i class="fas fa-shopping-cart"></i>
+
+                            Your Selected Items
+
+                        </h2>
+
+
+                        <a href="menu.html" class="continue-shopping">
+
+                            <i class="fas fa-arrow-left"></i>
+
+                            Continue Shopping
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- DYNAMIC CART ITEMS -->
+
+                    <div id="cartItems">
+
+                        <!-- JavaScript will display cart items here -->
+
+                    </div>
+
+
+
+                    <!-- EMPTY CART -->
+
+                    <div id="emptyCart" class="empty-cart" hidden>
+
+                        <div class="empty-cart-icon">
+
+                            <i class="fas fa-shopping-basket"></i>
+
+                        </div>
+
+
+                        <h2>Your Cart is Empty!</h2>
+
+
+                        <p>
+
+                            You haven't added any delicious
+                            food items to your cart yet.
+
+                        </p>
+
+
+                        <a href="menu.html" class="btn">
+
+                            Explore Our Menu
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ORDER SUMMARY -->
+
+                <div class="cart-summary" id="cartSummary">
+
+
+                    <h2>
+
+                        <i class="fas fa-receipt"></i>
+
+                        Order Summary
+
+                    </h2>
+
+
+
+                    <div class="summary-row">
+
+                        <span>Subtotal</span>
+
+                        <span id="cartSubtotal">₹0.00</span>
+
+                    </div>
+
+
+
+                    <div class="summary-row">
+
+                        <span>GST (5%)</span>
+
+                        <span id="cartTax">₹0.00</span>
+
+                    </div>
+
+
+
+                    <div class="summary-row">
+
+                        <span>Delivery Charges</span>
+
+                        <span id="deliveryCharge">₹0.00</span>
+
+                    </div>
+
+
+
+                    <div class="summary-divider"></div>
+
+
+
+                    <div class="summary-row total-row">
+
+                        <strong>Total Amount</strong>
+
+                        <strong id="cartTotal">₹0.00</strong>
+
+                    </div>
+
+
+
+                    <!-- PROMO CODE -->
+
+                    <div class="promo-section">
+
+                        <label for="promoCode">
+
+                            Apply Promo Code
+
+                        </label>
+
+
+                        <div class="promo-input">
+
+                            <input
+                                type="text"
+                                id="promoCode"
+                                placeholder="Enter promo code">
+
+
+                            <button type="button" id="applyPromo">
+
+                                Apply
+
+                            </button>
+
+                        </div>
+
+
+                        <p id="promoMessage"></p>
+
+                    </div>
+
+
+
+                    <!-- CHECKOUT BUTTON -->
+
+                    <a href="checkout.html"
+                        class="btn checkout-btn"
+                        id="checkoutButton">
+
+                        Proceed to Checkout
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+
+
+                    <div class="payment-info">
+
+                        <p>
+
+                            <i class="fas fa-lock"></i>
+
+                            Secure Checkout
+
+                        </p>
+
+
+                        <p>
+
+                            <i class="fas fa-shield-alt"></i>
+
+                            Safe and Fresh Delivery
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+
+            <div class="footer-container">
+
+
+                <div class="footer-box">
+
+                    <a href="index.html" class="logo">
+
+                        <i class="fas fa-utensils"></i>
+
+                        Foodie<span>Hub</span>
+
+                    </a>
+
+
+                    <p>
+
+                        Bringing authentic North Indian
+                        and South Indian flavours to your doorstep.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="footer-box">
+
+                    <h3>Quick Links</h3>
+
+                    <a href="index.html">Home</a>
+
+                    <a href="menu.html">Menu</a>
+
+                    <a href="about.html">About</a>
+
+                    <a href="contact.html">Contact</a>
+
+                </div>
+
+
+
+                <div class="footer-box">
+
+                    <h3>Contact Us</h3>
+
+                    <p>+91 98765 43210</p>
+
+                    <p>support@foodiehub.com</p>
+
+                    <p>Bengaluru, India</p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="footer-bottom">
+
+                <p>
+
+                    © 2026 FoodieHub. All Rights Reserved.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="data.js"></script>
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,659 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | FoodieHub</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="header">
+
+        <nav class="navbar container">
+
+            <a href="index.html" class="logo">
+
+                <i class="fas fa-utensils"></i>
+
+                Foodie<span>Hub</span>
+
+            </a>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="menu.html">Menu</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+
+            <div class="nav-icons">
+
+                <a href="cart.html" class="cart-icon">
+
+                    <i class="fas fa-shopping-cart"></i>
+
+                    <span id="cart-count">0</span>
+
+                </a>
+
+
+                <i class="fas fa-bars menu-toggle" id="menuToggle"></i>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= CHECKOUT HERO ================= -->
+
+    <section class="menu-hero">
+
+        <div class="container">
+
+            <span class="hero-tag">
+
+                <i class="fas fa-credit-card"></i>
+
+                Complete Your Order
+
+            </span>
+
+
+            <h1>
+
+                Secure <span>Checkout</span>
+
+            </h1>
+
+
+            <p>
+
+                Enter your delivery details and enjoy
+                your favourite Indian food.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CHECKOUT SECTION ================= -->
+
+    <section class="checkout-section section-padding">
+
+        <div class="container">
+
+
+            <div class="checkout-container">
+
+
+                <!-- CUSTOMER DETAILS FORM -->
+
+                <div class="checkout-form-container">
+
+
+                    <h2>
+
+                        <i class="fas fa-user"></i>
+
+                        Customer Information
+
+                    </h2>
+
+
+                    <form id="checkoutForm">
+
+
+                        <!-- FULL NAME -->
+
+                        <div class="form-group">
+
+                            <label for="customerName">
+
+                                Full Name *
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="customerName"
+                                name="customerName"
+                                placeholder="Enter your full name"
+                                minlength="3"
+                                required>
+
+                        </div>
+
+
+
+                        <!-- PHONE NUMBER -->
+
+                        <div class="form-group">
+
+                            <label for="customerPhone">
+
+                                Mobile Number *
+
+                            </label>
+
+
+                            <input
+                                type="tel"
+                                id="customerPhone"
+                                name="customerPhone"
+                                placeholder="Enter 10-digit mobile number"
+                                pattern="[6-9][0-9]{9}"
+                                maxlength="10"
+                                required>
+
+                        </div>
+
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="customerEmail">
+
+                                Email Address *
+
+                            </label>
+
+
+                            <input
+                                type="email"
+                                id="customerEmail"
+                                name="customerEmail"
+                                placeholder="Enter your email address"
+                                required>
+
+                        </div>
+
+
+
+                        <!-- DELIVERY ADDRESS -->
+
+                        <h2 class="form-subheading">
+
+                            <i class="fas fa-map-marker-alt"></i>
+
+                            Delivery Address
+
+                        </h2>
+
+
+
+                        <!-- HOUSE ADDRESS -->
+
+                        <div class="form-group">
+
+                            <label for="customerAddress">
+
+                                House No. / Street Address *
+
+                            </label>
+
+
+                            <textarea
+                                id="customerAddress"
+                                name="customerAddress"
+                                rows="4"
+                                placeholder="Enter your complete delivery address"
+                                required></textarea>
+
+                        </div>
+
+
+
+                        <!-- CITY AND PINCODE -->
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+
+                                <label for="customerCity">
+
+                                    City *
+
+                                </label>
+
+
+                                <input
+                                    type="text"
+                                    id="customerCity"
+                                    name="customerCity"
+                                    placeholder="Enter city"
+                                    required>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="customerPincode">
+
+                                    PIN Code *
+
+                                </label>
+
+
+                                <input
+                                    type="text"
+                                    id="customerPincode"
+                                    name="customerPincode"
+                                    placeholder="6-digit PIN code"
+                                    pattern="[0-9]{6}"
+                                    maxlength="6"
+                                    required>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- DELIVERY INSTRUCTIONS -->
+
+                        <div class="form-group">
+
+                            <label for="deliveryInstructions">
+
+                                Delivery Instructions (Optional)
+
+                            </label>
+
+
+                            <textarea
+                                id="deliveryInstructions"
+                                name="deliveryInstructions"
+                                rows="2"
+                                placeholder="Any special delivery instructions?"></textarea>
+
+                        </div>
+
+
+
+                        <!-- PAYMENT METHOD -->
+
+                        <h2 class="form-subheading">
+
+                            <i class="fas fa-wallet"></i>
+
+                            Select Payment Method
+
+                        </h2>
+
+
+
+                        <div class="payment-options">
+
+
+                            <!-- CASH ON DELIVERY -->
+
+                            <label class="payment-card">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="Cash on Delivery"
+                                    checked
+                                    required>
+
+
+                                <div class="payment-content">
+
+                                    <i class="fas fa-money-bill-wave"></i>
+
+                                    <div>
+
+                                        <h3>Cash on Delivery</h3>
+
+                                        <p>Pay when your food arrives.</p>
+
+                                    </div>
+
+                                </div>
+
+                            </label>
+
+
+
+                            <!-- UPI -->
+
+                            <label class="payment-card">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="UPI">
+
+
+                                <div class="payment-content">
+
+                                    <i class="fas fa-mobile-alt"></i>
+
+                                    <div>
+
+                                        <h3>UPI Payment</h3>
+
+                                        <p>Demo payment option.</p>
+
+                                    </div>
+
+                                </div>
+
+                            </label>
+
+
+
+                            <!-- CARD -->
+
+                            <label class="payment-card">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="Card">
+
+
+                                <div class="payment-content">
+
+                                    <i class="fas fa-credit-card"></i>
+
+                                    <div>
+
+                                        <h3>Credit / Debit Card</h3>
+
+                                        <p>Demo payment option.</p>
+
+                                    </div>
+
+                                </div>
+
+                            </label>
+
+
+                        </div>
+
+
+
+                        <!-- PLACE ORDER BUTTON -->
+
+                        <button type="submit" class="btn place-order-btn">
+
+                            <i class="fas fa-check-circle"></i>
+
+                            Place Your Order
+
+                        </button>
+
+
+                        <p class="secure-message">
+
+                            <i class="fas fa-lock"></i>
+
+                            Your order information is handled securely.
+
+                        </p>
+
+
+                    </form>
+
+
+                </div>
+
+
+
+                <!-- ORDER SUMMARY -->
+
+                <div class="checkout-summary">
+
+
+                    <h2>
+
+                        <i class="fas fa-receipt"></i>
+
+                        Your Order Summary
+
+                    </h2>
+
+
+
+                    <!-- DYNAMIC ORDER ITEMS -->
+
+                    <div id="checkoutItems">
+
+                        <!-- JavaScript displays selected items here -->
+
+                    </div>
+
+
+
+                    <div class="summary-divider"></div>
+
+
+
+                    <div class="summary-row">
+
+                        <span>Subtotal</span>
+
+                        <span id="checkoutSubtotal">₹0.00</span>
+
+                    </div>
+
+
+
+                    <div class="summary-row">
+
+                        <span>GST (5%)</span>
+
+                        <span id="checkoutTax">₹0.00</span>
+
+                    </div>
+
+
+
+                    <div class="summary-row">
+
+                        <span>Delivery Charges</span>
+
+                        <span id="checkoutDelivery">₹0.00</span>
+
+                    </div>
+                    <div class="summary-row">
+                        <span>Discount</span>
+                     <strong id="checkoutDiscount">₹0.00</strong>
+                      </div>
+
+
+
+                    <div class="summary-divider"></div>
+
+
+
+                    <div class="summary-row total-row">
+
+                        <strong>Total Amount</strong>
+
+                        <strong id="checkoutTotal">₹0.00</strong>
+
+                    </div>
+
+
+
+                    <div class="checkout-note">
+
+                        <i class="fas fa-truck"></i>
+
+                        <p>
+
+                            Estimated delivery time:
+                            30–45 minutes.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <a href="cart.html" class="continue-shopping">
+
+                        <i class="fas fa-arrow-left"></i>
+
+                        Back to Cart
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+
+            <div class="footer-container">
+
+
+                <div class="footer-box">
+
+                    <a href="index.html" class="logo">
+
+                        <i class="fas fa-utensils"></i>
+
+                        Foodie<span>Hub</span>
+
+                    </a>
+
+
+                    <p>
+
+                        Bringing authentic Indian flavours
+                        directly to your doorstep.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="footer-box">
+
+                    <h3>Quick Links</h3>
+
+                    <a href="index.html">Home</a>
+
+                    <a href="menu.html">Menu</a>
+
+                    <a href="about.html">About</a>
+
+                    <a href="contact.html">Contact</a>
+
+                </div>
+
+
+
+                <div class="footer-box">
+
+                    <h3>Contact Us</h3>
+
+                    <p>+91 98765 43210</p>
+
+                    <p>support@foodiehub.com</p>
+
+                    <p>Bengaluru, India</p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="footer-bottom">
+
+                <p>
+
+                    © 2026 FoodieHub. All Rights Reserved.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="data.js"></script>
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
